@@ -5,7 +5,6 @@ import CastDetails from "./CastDetails";
 import CrewDetails from "./CrewDetails";
 import RatingsPopularity from "./RatingsPopularity";
 
-
 const Details = () => {
   const { id } = useParams();
   const [movieDetail, setMovieDetail] = useState([]);
@@ -39,6 +38,7 @@ const Details = () => {
           backgroundImage: `url(https://image.tmdb.org/t/p/original/${backdrop_path})`,
         }}
       >
+
         <div class="bg-gradient-to-r from-black/30 to-transparent -mx-7 -mb-6 px-7 pb-6 pt-2">
           <span class="uppercase text-3xl font-semibold drop-shadow-lg ">
             {title}
@@ -66,8 +66,6 @@ const Details = () => {
           {credits && credits.cast.slice(0 , 8).map((cast) => <CastDetails imageURL={cast.profile_path}  name={cast.name} characterName={cast.character} />)}
         </div>
       </div>
-
-
 
       <div className="text-2xl font-bold text-center m-5">
         <h2>Crew</h2>
