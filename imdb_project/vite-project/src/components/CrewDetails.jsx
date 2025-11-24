@@ -12,15 +12,12 @@ function CrewDetails({imageURL , name , department}) {
   <div className="p-6 text-center">
     <h4 className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
       {name}
-    
     </h4>
     <p className="block mb-2 font-sans text-sm antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
      {department}
     </p>
   </div>
  </div>
-
-
   )
 }
 
