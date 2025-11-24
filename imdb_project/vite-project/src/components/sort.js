@@ -6,9 +6,7 @@
 
 // const sortedNumbers = numbers.sort()
 
-// console.log(sortedNumbers)
-
-
+// console.log(sortedNumbers
 // const alphabets = ['b' , 'a' , 'P' , 'd']
 
 // alphabets.forEach((alphabet)=>{
@@ -19,10 +17,7 @@
 
 
 // const sortedAlphabets = alphabets.sort()
-
 // console.log(sortedAlphabets)
-
-
 // Comparator Callback
 
 
