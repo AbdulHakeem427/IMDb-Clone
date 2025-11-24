@@ -2,10 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 function Banner() {
-
     const [index , setIndex] = useState(0)
-    
-
     const [films , setFilms] = useState([])
 
     useEffect(() => {
@@ -19,8 +16,7 @@ function Banner() {
           setFilms(res.data.results);
         });
     }, []);
-
-
+    
    useEffect(()=>{
     let idx = Math.floor(Math.random() * 10)
     setIndex(idx)
