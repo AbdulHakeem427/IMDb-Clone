@@ -1,7 +1,5 @@
 import React from "react";
-
 import Logo from "../MovieLogo.png";
-
 import {Link} from 'react-router-dom'
 
 function NavBar() {
