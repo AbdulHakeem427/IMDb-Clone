@@ -2,6 +2,7 @@ import React from "react";
 import { MovieContext } from "./MovieContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 function MovieCard({ movieObject }) {
 
@@ -43,11 +44,16 @@ function MovieCard({ movieObject }) {
         {movieObject.title}
       </div>
 
-      <Link to={`/details/${movieObject.id}`} ><i class="fa-solid fa-circle-info text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"></i></Link>
+      <Link to={`/details/${movieObject.id}`} ><i className="fa-solid fa-circle-info text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"></i></Link>
      
     </div>
      
   );
 }
-
+MovieCard.propTypes = {
+  movieObject: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    // add other expected properties of movieObject
+  }),
+};
 export default MovieCard;

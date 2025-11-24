@@ -18,6 +18,7 @@ const genreids = {
     53: "Thriller",
     10752: "War",
     37: "Western",
+    
   };
 
   export default genreids

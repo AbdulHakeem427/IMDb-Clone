@@ -41,7 +41,8 @@ function Movies() {
       <div className="flex justify-evenly flex-wrap gap-8 ">
         {movies.map((movieObj) => {
           return (
-            <MovieCard
+            <MovieCard 
+              key={movieObj.id}
               name={movieObj.title}
               posterPath={movieObj.poster_path}
               movieObject={movieObj}

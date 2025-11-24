@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 function CastDetails({imageURL , name , characterName}) {
   return (
@@ -22,5 +23,12 @@ function CastDetails({imageURL , name , characterName}) {
 
   )
 }
+
+CastDetails.propTypes = {
+  imageURL: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  characterName: PropTypes.string.isRequired,
+};
+
 
 export default CastDetails

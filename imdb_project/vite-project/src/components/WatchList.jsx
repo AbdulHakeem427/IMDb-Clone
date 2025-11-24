@@ -59,6 +59,7 @@ function WatchList() {
         {genreList.map((genre) => {
           return (
             <div
+            key={genre}
               onClick={() => handleFilter(genre)}
               className={
                 currGenre == genre
@@ -93,12 +94,12 @@ function WatchList() {
               <th>
                 <i
                   onClick={handleAscnedingRatings}
-                  class="fa-solid fa-arrow-up"
+                  className="fa-solid fa-arrow-up"
                 ></i>{" "}
                 Ratings{" "}
                 <i
                   onClick={handleDescendingRatings}
-                  class="fa-solid fa-arrow-down"
+                  className="fa-solid fa-arrow-down"
                 ></i>
               </th>
               <th>Popularity</th>
@@ -120,7 +121,8 @@ function WatchList() {
                 movieObj.title.toLowerCase().includes(search.toLowerCase())
               )
               .map((movieObj) => (
-                <tr className="border-b-2">
+             
+                <tr key={movieObj.id} className="border-b-2 bg-gray-50 " >
                   <td className="flex items-center px-6 py-4">
                     <img
                       className="h-[6rem] w-[10rem]"
@@ -129,9 +131,9 @@ function WatchList() {
                     <div className="mx-10">{movieObj.title}</div>
                   </td>
 
-                  <td>{movieObj.vote_average}</td>
-                  <td>{movieObj.popularity}</td>
-                  <td>{genreids[movieObj.genre_ids[0]]}</td>
+                  <td >{movieObj.vote_average}</td>
+                  <td >{movieObj.popularity}</td>
+                  <td >{genreids[movieObj.genre_ids[0]]}</td>
 
                   <td onClick={()=>DeleteFromWatchList(movieObj)} className="text-red-500">Delete</td>
                 </tr>

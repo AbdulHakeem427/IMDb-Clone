@@ -1,11 +1,11 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Initialize the Gemini API with your API key
-const genAI = new GoogleGenerativeAI('AIzaSyCXFv82iImIv_i0MvPSAhM9A6BdBiKnAEI');
+const genAI = new GoogleGenerativeAI('AIzaSyBA6ds67mAQfap7UTFb1FrzCAMVRsz2flg');
 
 // Create a reusable model instance
 export const getGeminiModel = async () => {
-  return genAI.getGenerativeModel({ model: "gemini-pro" });
+  return genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 };
 
 // Function to get movie recommendations
@@ -39,8 +39,9 @@ export const getMovieRecommendations = async (watchlist) => {
     const response = await result.response;
     const text = response.text();
     
+     const cleanText = text.replace(/```json|```/g, "").trim();
     // Parse the JSON response
-    return JSON.parse(text);
+    return JSON.parse(cleanText);
   } catch (error) {
     console.error('Error getting recommendations:', error);
     return { recommendations: [] };
