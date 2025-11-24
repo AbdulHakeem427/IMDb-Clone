@@ -20,6 +20,8 @@ function App() {
     console.log(updatedWatchlist);
   };
 
+
+  
   const DeleteFromWatchList = (movieObj) => {
     let filtredMovies = watchlist.filter((movie) => {
       return movie.id != movieObj.id;
